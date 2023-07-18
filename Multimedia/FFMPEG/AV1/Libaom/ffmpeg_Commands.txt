@@ -1,0 +1,1 @@
+ffmpeg -i input.mp4 -c:v libaom-av1 -strict experimental -crf 38 -b:v 0 -tile-columns 2 -tile-rows 1 -row-mt 1 -g 1000 -acodec libopus -ab 16k -threads 4 -cpu-used 2 output.webm < /dev/null
