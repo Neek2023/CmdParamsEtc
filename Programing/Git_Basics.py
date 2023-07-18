@@ -50,6 +50,9 @@ git commit -am "descriptive commit message": In addition to including the commit
 ###############################################################################################################
 git push
 
+### If key not saved and getting errors:
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_ed25519_GitHub_Neek2023
 
 
 ###############################################################################################################
