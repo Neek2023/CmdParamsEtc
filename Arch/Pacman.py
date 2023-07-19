@@ -3,6 +3,11 @@
 ### !!!!!!!!!!!!!!!!ADD TO A RSS!!!!!!!!!!!!!!!!!!!!!
 ### Also maybe install this from the AUR https://aur.archlinux.org/packages/informant
 
+
+### https://wiki.archlinux.org/title/pacman
+### https://wiki.archlinux.org/title/PKGBUILD
+### https://wiki.archlinux.org/title/Creating_packages
+
 #########################################################################################################
 ### Update all packages on the system:
 #########################################################################################################
@@ -117,5 +122,27 @@ pacman -U http://www.example.com/repo/example.pkg.tar.zst
 
 
 
+#########################################################################################################
+### Bonus commands
+#########################################################################################################
+### To list all packages no longer required as dependencies (orphans):
+pacman -Qdt
 
+### To list all packages explicitly installed and not required as dependencies:
+pacman -Qet
+
+### To display extensive information about a given package:
+pacman -Si package_name
+
+
+
+
+#########################################################################################################
+### Valid pgp keys (from PKGBUILD page)
+#########################################################################################################
+### An array of PGP fingerprints. If used, makepkg will only accept signatures from the keys listed here and will ignore the trust values from the keyring. If the source file was signed with a subkey, makepkg will still use the primary key for comparison.
+
+### Only full fingerprints are accepted. They must be uppercase and must not contain whitespace characters. 
+### Use the below to find out the fingerprint of the appropriate key.
+gpg --list-keys --fingerprint KEYID
 
