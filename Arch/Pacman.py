@@ -134,6 +134,8 @@ pacman -Qet
 ### To display extensive information about a given package:
 pacman -Si package_name
 
+### To remove a package and its dependencies which are not required by any other installed package:
+pacman -Rs _package_name_
 
 
 
