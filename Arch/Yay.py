@@ -60,6 +60,7 @@ man yay
 
 
 
-
+### See yay stats:
+yay -P --stats
 
 
