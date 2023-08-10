@@ -25,6 +25,9 @@ pacman -Ss string1 string2 ...
 #########################################################################################################
 pactree package_name
 
+### add the -r flag if you want to see the tree of things that depend on this package (the reverse of the above)
+
+
 #########################################################################################################
 ### Cleaning the cache:
 ### https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache
@@ -137,6 +140,12 @@ pacman -Si package_name
 ### To remove a package and its dependencies which are not required by any other installed package:
 pacman -Rs _package_name_
 
+### To check which packages depend on a given package:
+pacman -Qi qt
+pacman -Sii qt
+
+### To list packages not installed from the main repos(ie AUR or pkgbuild), use:
+pacman -Qm
 
 
 #########################################################################################################

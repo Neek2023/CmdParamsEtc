@@ -1,0 +1,12 @@
+### list devices:
+lsblk
+### Find the correct device from the list as the input file (if)
+
+### create computer image
+sudo dd if=/dev/sda of=/run/media/manjaro/WD_USB_HDD_2TB/Computer_Disk_Dumps/Home/2020-04-26_x220manj.img bs=64K conv=noerror,sync status=progress
+
+### if for M.2 uses:
+# if=/dev/nvme0n1 
+
+### if for SATA uses:
+# if=/dev/sda
