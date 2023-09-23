@@ -1,0 +1,48 @@
+### Installing LIFBASE with wine on X220 arch:
+
+wine Lifbase\ 2.1.exe 
+### EDITED LINE -> wine: created the configuration directory '/home/USER_NAME_HERE/.wine'
+002c:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+004c:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+0054:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+004c:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+004c:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+004c:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0054:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+0054:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+0054:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0054:err:ole:start_rpcss Failed to open RpcSs service
+0094:fixme:file:NtLockFile I/O completion on lock not implemented yet
+0094:fixme:ntdll:NtQuerySystemInformation info_class SYSTEM_PERFORMANCE_INFORMATION
+0094:fixme:msi:internal_ui_handler internal UI not implemented for message 0x0b000000 (UI level = 1)
+0094:fixme:msi:internal_ui_handler internal UI not implemented for message 0x0b000000 (UI level = 1)
+00f0:fixme:msg:pack_message msg 14 (WM_ERASEBKGND) not supported yet
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+### EDITED LINE -> wine: configuration in L"/home/USER_NAME_HERE/.wine" has been updated.
+0024:fixme:ntdll:NtQuerySystemInformation info_class SYSTEM_PERFORMANCE_INFORMATION
+014c:fixme:ntdll:NtQuerySystemInformation info_class SYSTEM_PERFORMANCE_INFORMATION
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+wine: Read access denied for device L"\\??\\Z:\\", FS volume label and serial are not available.
+014c:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+014c:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+0164:err:menubuilder:InvokeShellLinker failed to extract icon from L"C:\\Program Files (x86)\\LIFBASE\\Homepage.url"
+015c:err:menubuilder:InvokeShellLinker failed to extract icon from L"C:\\Program Files (x86)\\LIFBASE\\LIFBASE manual.pdf"
+
+### Seems to run fine

@@ -1,0 +1,120 @@
+### Installing PDF24 with wine:
+
+wine pdf24-creator-11.13.2-x64.exe 
+002c:err:winediag:getaddrinfo Failed to resolve your host name IP
+007c:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+007c:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+007c:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+007c:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0024:fixme:thread:GetThreadUILanguage : stub, returning default language.
+0024:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 005ED97C, 00000000 005ED9A4
+0024:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 005ED97C 00000000 005ED9A4) returning a dummy value (current locale)
+0024:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 005ED97C, 015CA680 005ED9A4
+0024:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 005ED97C 015CA680 005ED9A4) returning a dummy value (current locale)
+010c:fixme:thread:GetThreadUILanguage : stub, returning default language.
+010c:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 0082D9C8, 00000000 0082D9F0
+010c:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 0082D9C8 00000000 0082D9F0) returning a dummy value (current locale)
+010c:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 0082D9C8, 0180A680 0082D9F0
+010c:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 0082D9C8 0180A680 0082D9F0) returning a dummy value (current locale)
+010c:fixme:wtsapi:WTSRegisterSessionNotification Stub 0001008E 0x00000000
+010c:fixme:uxtheme:BufferedPaintInit Stub ()
+010c:fixme:win:DisableProcessWindowsGhosting : stub
+010c:fixme:graphics:ShutdownBlockReasonDestroy (0001008E): stub
+010c:fixme:graphics:ShutdownBlockReasonCreate (0001008E, L"Installing"): stub
+010c:fixme:rstrtmgr:RmStartSession 006D8798, 0, 006D879C stub!
+010c:fixme:exec:SHELL_execute flags ignored: 0x00000100
+0114:err:sc:wmain failed to open service 1060
+010c:fixme:graphics:ShutdownBlockReasonDestroy (0001008E): stub
+010c:fixme:graphics:ShutdownBlockReasonCreate (0001008E, L"Installing PDF24 Creator."): stub
+010c:fixme:system:EnableNonClientDpiScaling (000200BA): stub
+010c:fixme:msg:ChangeWindowMessageFilterEx 000200BA c04f 1 00000000
+010c:fixme:system:EnableNonClientDpiScaling (000300BA): stub
+010c:fixme:msg:ChangeWindowMessageFilterEx 000300BA c04f 1 00000000
+010c:fixme:msg:ChangeWindowMessageFilterEx 000200B0 c04f 1 00000000
+010c:fixme:msg:ChangeWindowMessageFilterEx 000300B0 c04f 1 00000000
+010c:fixme:shell:SHAutoComplete stub
+010c:fixme:rstrtmgr:RmRegisterResources -559038737, 166, 01D03C30, 0, 00000000, 0, 00000000 stub!
+010c:fixme:rstrtmgr:RmGetList -559038737, 0082F24C, 0082F250, 01CFC900, 0082F248 stub!
+010c:fixme:exec:SHELL_execute flags ignored: 0x00000100
+010c:fixme:exec:SHELL_execute flags ignored: 0x00000100
+010c:fixme:exec:SHELL_execute flags ignored: 0x00000100
+010c:fixme:explorerframe:taskbar_list_SetProgressValue iface 00DB84C0, hwnd 0001008E, ullCompleted 0, ullTotal 317 stub!
+010c:fixme:sfc:SfcIsFileProtected (00000000, L"C:\\Program Files\\PDF24\\unins000.exe") stub
+010c:fixme:explorerframe:taskbar_list_SetProgressState iface 00DB84C0, hwnd 0001008E, flags 0 stub!
+01a8:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01c0:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01d8:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01f0:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0218:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0230:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0248:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0260:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0270:fixme:service:svcctl_ChangeServiceConfig2W SERVICE_CONFIG_FAILURE_ACTIONS not implemented: period 86400 msg (null) cmd (null)
+0268:err:ole:NDRCContextBinding invalid handle 00000000007E3720
+010c:fixme:exec:SHELL_execute flags ignored: 0x00000100
+010c:err:exec:SHELL_ExecuteW cannot set directory L"https://www.pdf24.org/products/pdf-creator"
+010c:err:exec:SHELL_ExecuteW cannot set directory L"https://www.pdf24.org/products/pdf-creator"
+libva error: /usr/lib/dri/iHD_drv_video.so init failed
+010c:fixme:rstrtmgr:RmEndSession 3735928559 stub!
+010c:fixme:graphics:ShutdownBlockReasonDestroy (0001008E): stub
+010c:fixme:wtsapi:WTSUnRegisterSessionNotification Stub 0001008E
+010c:fixme:uxtheme:BufferedPaintUnInit Stub ()
+
+### The newest PDF24 does not work at the momemt, the WINE webpage for PDF24 says this too:
+### https://appdb.winehq.org/objectManager.php?sClass=version&iId=40604
+wine uninstaller
+### Uninstalled version 11.something
+
+### Instead run version 9.2.2. (Windows 8+7 instead of Windows 10+11)
+wine pdf24-creator-9.2.2-x86.exe 
+028c:fixme:thread:GetThreadUILanguage : stub, returning default language.
+028c:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 005DD97C, 00000000 005DD9A4
+028c:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 005DD97C 00000000 005DD9A4) returning a dummy value (current locale)
+028c:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 005DD97C, 015BA680 005DD9A4
+028c:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 005DD97C 015BA680 005DD9A4) returning a dummy value (current locale)
+029c:fixme:thread:GetThreadUILanguage : stub, returning default language.
+029c:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 0079D9C8, 00000000 0079D9F0
+029c:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 0079D9C8 00000000 0079D9F0) returning a dummy value (current locale)
+029c:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 0079D9C8, 017819B0 0079D9F0
+029c:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 0079D9C8 017819B0 0079D9F0) returning a dummy value (current locale)
+029c:fixme:wtsapi:WTSRegisterSessionNotification Stub 0003014C 0x00000000
+029c:fixme:uxtheme:BufferedPaintInit Stub ()
+029c:fixme:win:DisableProcessWindowsGhosting : stub
+029c:fixme:graphics:ShutdownBlockReasonDestroy (0003014C): stub
+029c:fixme:graphics:ShutdownBlockReasonCreate (0003014C, L"Installing"): stub
+029c:fixme:rstrtmgr:RmStartSession 0065B078, 0, 0065B07C stub!
+029c:fixme:graphics:ShutdownBlockReasonDestroy (0003014C): stub
+029c:fixme:graphics:ShutdownBlockReasonCreate (0003014C, L"Installing PDF24 Creator."): stub
+029c:fixme:system:EnableNonClientDpiScaling (00020116): stub
+029c:fixme:msg:ChangeWindowMessageFilterEx 00020116 c058 1 00000000
+029c:fixme:system:EnableNonClientDpiScaling (00030116): stub
+029c:fixme:msg:ChangeWindowMessageFilterEx 00030116 c058 1 00000000
+029c:fixme:msg:ChangeWindowMessageFilterEx 0002010C c058 1 00000000
+029c:fixme:msg:ChangeWindowMessageFilterEx 0003010C c058 1 00000000
+029c:fixme:shell:SHAutoComplete stub
+029c:fixme:rstrtmgr:RmRegisterResources -559038737, 83, 019A4A80, 0, 00000000, 0, 00000000 stub!
+029c:fixme:rstrtmgr:RmGetList -559038737, 0079F24C, 0079F250, 019A4A80, 0079F248 stub!
+029c:fixme:explorerframe:taskbar_list_SetProgressValue iface 00D21EA0, hwnd 0003014C, ullCompleted 0, ullTotal 4b1 stub!
+029c:fixme:sfc:SfcIsFileProtected (00000000, L"C:\\Program Files (x86)\\PDF24\\unins000.exe") stub
+029c:fixme:explorerframe:taskbar_list_SetProgressState iface 00D21EA0, hwnd 0003014C, flags 0 stub!
+02dc:fixme:printui:PrintUIEntryW command not implemented: L"i"
+02ec:fixme:printui:PrintUIEntryW command not implemented: L"i"
+02fc:fixme:printui:PrintUIEntryW command not implemented: L"i"
+030c:fixme:printui:PrintUIEntryW command not implemented: L"i"
+032c:fixme:printui:PrintUIEntryW command not implemented: L"i"
+033c:fixme:printui:PrintUIEntryW command not implemented: L"i"
+034c:fixme:printui:PrintUIEntryW command not implemented: L"i"
+035c:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0364:err:ole:NDRCContextBinding invalid handle 01679130
+0390:fixme:ver:GetCurrentPackageId (0052D418 00000000): stub
+029c:fixme:exec:SHELL_execute flags ignored: 0x00000100
+029c:err:exec:SHELL_ExecuteW cannot set directory L"https://www.pdf24.org/products/pdf-creator"
+029c:err:exec:SHELL_ExecuteW cannot set directory L"https://www.pdf24.org/products/pdf-creator"
+libva error: /usr/lib/dri/iHD_drv_video.so init failed
+029c:fixme:rstrtmgr:RmEndSession 3735928559 stub!
+029c:fixme:graphics:ShutdownBlockReasonDestroy (0003014C): stub
+029c:fixme:wtsapi:WTSUnRegisterSessionNotification Stub 0003014C
+029c:fixme:uxtheme:BufferedPaintUnInit Stub ()
+
+### works fine so far
+

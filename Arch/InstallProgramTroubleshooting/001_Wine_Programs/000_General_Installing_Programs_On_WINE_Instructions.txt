@@ -1,0 +1,17 @@
+### Installing someting on WINE:
+### https://www.howtogeek.com/105271/how-to-run-windows-software-on-ubuntu-with-wine/
+
+### If exe:
+wine /path/to/application.exe
+
+### If msi:
+wine msiexec /i /path/to/installer.msi
+
+### The above are preferred to right clicking and clicking open with WINE since you can see any error messages. Often error messages do not stop the programs from running.
+
+### Sometimes you need to use WINÈs configutations dialogs to use settings to get certain applications working
+### E.G. setting a specific version of windows for WINE to behave as
+
+### Some programs may also require registry edits
+
+### Can also use Uninstall WINE utility to list and uninstall applications

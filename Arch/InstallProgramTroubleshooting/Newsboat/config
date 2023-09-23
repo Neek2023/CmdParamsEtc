@@ -1,0 +1,143 @@
+################################################################################
+### Misc
+################################################################################
+#color background white black
+#include /usr/share/doc/newsboat/contrib/colorschemes/inkpot
+include /usr/share/doc/newsboat/contrib/colorschemes/universal-color-NAW
+
+
+
+datetime-format "%Y-%m-%d"
+#delete-read-articles-on-quit yes
+#highlight all "newsboat" red
+#highlight-article "author =~ \"Andreas Krennmair\"" white red bold
+#run-on-startup next-unread; open; random-unread; open
+### Default path articles will be saved to:
+#save-path "~/Saved Articles"
+#show-keymap-hint no
+#show-read-articles no
+#text-width 72
+toggleitemread-jumps-to-next-unread yes
+
+
+
+
+
+
+################################################################################
+### Reloading
+################################################################################
+auto-reload yes
+reload-threads 100
+
+################################################################################
+### Browser
+################################################################################
+browser "brave %u"
+
+################################################################################
+### The Old Reader
+################################################################################
+urls-source "oldreader"
+oldreader-login "USER@EMAIL.com"
+oldreader-password "PASSWORD"
+oldreader-flag-share "a"
+oldreader-flag-star "b"
+oldreader-show-special-feeds "no"
+
+################################################################################
+### Ignore mode filter articles
+################################################################################
+ignore-mode "display"
+#ignore-mode "download"
+#ignore-article "FEED" "EXPRESSION"
+ignore-article "*" content=~"football"
+ignore-article "*" content=~"Mac|\
+Lawn|\
+Ukraine|\
+Instagram|\
+Dorm|\
+You.Should.Buy|\
+[0-9]*.Right.Now|\
+Wordle"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

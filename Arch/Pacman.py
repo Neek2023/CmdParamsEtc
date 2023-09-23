@@ -157,3 +157,11 @@ pacman -Qm
 ### Use the below to find out the fingerprint of the appropriate key.
 gpg --list-keys --fingerprint KEYID
 
+
+
+#########################################################################################################
+### Add color?
+#########################################################################################################
+### edit /etc/pacman.conf to uncomment or add:
+Color
+ILoveCandy

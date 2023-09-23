@@ -9,13 +9,13 @@
 ### Normal Usage Commands
 ###############################################################################
 ### List video and audio formats:
-yt-dlp -F https://www.youtube.com/watch?v=W1IpSGHf1gc
+yt-dlp -F URL
 
 ### DL worst webm with height>=720 and worst webm audio with tbr>50
-yt-dlp -f "wv*[ext=webm][height>=?720]+wa*[ext=webm][tbr>?50]" https://www.youtube.com/watch?v=TtisQ9yZ2zo
+yt-dlp -f "wv*[ext=webm][height>=?720]+wa*[ext=webm][tbr>?50]" URL
 
 ### DL video format 247 and audio format 250
-yt-dlp -f 247+250 https://www.youtube.com/watch?v=W1IpSGHf1gc
+yt-dlp -f 247+250 URL
 
 
 
@@ -59,6 +59,14 @@ yt-dlp --ignore-errors --continue --no-overwrites --download-archive progress.tx
 ### URL from clipboard
 ###############################################################################
 ### A shell alias, a desktop launcher or a keyboard shortcut can be set to download a video (or audio) of a selected (or copied) URL by outputting it from the X selection. See Clipboard#Tools.
+
+yt-dlp -f "wv*[ext=webm][height>=?720]+wa*[ext=webm][tbr>?50]" --write-auto-sub --sub-lang en --limit-rate 1M URL
+
+#--playlist-start NUMBER          Playlist video to start at (default is 1)
+#--playlist-end NUMBER            Playlist video to end at (default is last)
+
+
+
 
 
 
