@@ -406,7 +406,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ### reboot and remove the install medium
 ### reset wireless network settings...I had trouble with this, so I remounted the partitions from usb iso and arch-chrooted back in...
-
+### Maybe do this before reboot: Install iwd or wpa_supplicant. Typical rant: wifi was working during installation and now it's not.
+### https://wiki.archlinux.org/title/Network_configuration
 
 
 
@@ -417,11 +418,32 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ### Before that, however, let’s configure the display server, network manager, and similar services.
 ### install the xorg , plasma-meta , and kde-applications packages:
 pacman -S xorg wayland wayland-docs
-pacman -S plasma-meta kde-applications
+pacman -S plasma-meta kde-applications plasma-wayland-session
+
+### if selecting pipewire-jack and wireplumber, then also run:
+pacman -S pipewire-alsa pipewire-pulse
+
 
 ### Then, enable the SDDM and NetworkManager services 
 systemctl enable sddm
 systemctl enable NetworkManager
+
+### if using a HiDPI display, follow this directions to scale sddm to screen resolution:
+### https://wiki.archlinux.org/title/SDDM#Enable_HiDPI
+### Create the following file:
+sudo touch /etc/sddm.conf.d/hidpi.conf
+sudo vim /etc/sddm.conf.d/hidpi.conf
+### enter the following:
+[Wayland]
+EnableHiDPI=true
+
+[X11]
+EnableHiDPI=true
+
+### When using Wayland, the HiDPI scaling depends on the greeter used.[3] For instance, when using a Qt-based greeter such as Breeze, add the following configuration:
+[General]
+GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=192
+
 
 ### Exit the arch-chroot environment by typing exit. 
 exit
@@ -512,27 +534,27 @@ sudo pacman -S libreoffice thunderbird firefox gedit flashplugin skype dropbox a
 sudo pacman -S p7zip p7zip-plugins unrar tar rsync
 
 
-"""
-### 7. Customizing the looks of your Arch Linux desktop
-You can customize your Arch Linux by installing some nice flat themes or the conky monitoring tool.
 
-Installing themes
+### Disable GRUB delay
+### To speed up your boot process, you can disable the GRUB screen that shows GRUB menu with 5-sec countdown and start booting right away. If you ever need the GRUB menu, you can call it by holding the Esc key during boot.
+### To enable this functionality, first open the GRUB config:
+sudo vim /etc/default/grub
+### Add or change the line where this variable is:
+set GRUB_TIMEOUT_STYLE=hidden.
 
-Some of the most liked themes are Arc GTK, flatplat, Vertex and Numix, which can be installed by below command:
+### Update the GRUB config:
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+### Reboot and your system will boot 5 second faster.
 
-yaourt -S arc-gtk-theme flatplat-theme-git vertex-themes
-sudo pacman -S numix-themes
-Go to settings > Appearance and change the default theme from there.
 
-Installing Conky
+### set up periodic SSD trim:
+sudo systemctl enable fstrim.timer
+### The fstrim service will write to syslog every time it's invoked:
+journalctl -u fstrim
+### Ex output:
+# Feb 07 19:18:23 fstrim[401]: /: 484.5 GiB (520173604864 bytes) trimmed on /dev/sdb3
 
-Conky is a free system manager application which can monitor and display memory usage, CPU statistics, disk storage, swap, CPU temperature and more.
 
-To install conky, use below command :
-
-sudo pacman -S conky
-You can configure conky yourself which will need some digging into the ~/.conkyrc file or you can download your favorite one from web and replace the default conkyrc file. There is a detailed tutorial about conky and its configuration on the Arch Linux website.
-"""
 
 ### Additional tip:
 ### At any point in time, if you feel like removing any application (and its dependencies), you can use these commands:

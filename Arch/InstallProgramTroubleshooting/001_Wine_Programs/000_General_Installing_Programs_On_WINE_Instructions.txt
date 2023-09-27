@@ -15,3 +15,9 @@ wine msiexec /i /path/to/installer.msi
 ### Some programs may also require registry edits
 
 ### Can also use Uninstall WINE utility to list and uninstall applications
+
+
+
+### If the magnification/text scale is very off run:
+winecfg
+### and change the "dpi" setting found in the "Graphics" tab. This only affects the font size.

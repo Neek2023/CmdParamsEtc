@@ -36,9 +36,9 @@ conda list -n myenv scipy
 ### Create environment
 ###--------------------------------------------------------------------------------
 ### To create an environment with a specific package:
-conda create -n myenv scipy
+#conda create -n myenv scipy
 ### Tip: Install all the programs that you want in this environment at the same time. Installing 1 program at a time can lead to dependency conflicts.
-#conda create Science_General python rstudio-desktop spyder 
+conda create -n ScienceGeneralEnv python rstudio-desktop spyder
 
 ### Spyder, Jupyter notebooks, RStudio
 ### To install this package run one of the following:
@@ -202,9 +202,8 @@ conda activate pypy
 conda install -n base conda-forge::mamba
 
 ### use mamba
-mamba install pandas
-
-
+mamba install -c selenium
+### https://linuxcommandlibrary.com/man/mamba
 
 
 

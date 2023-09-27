@@ -118,14 +118,22 @@ conda install -c conda-forge opencv python-docx imageio matplotlib pypdf2 seleni
 
 
 
+### 2023-09-24 arch p51 install:
+conda create -n GeneralScienceEnv python spyder jupyter pandas scipy
+### https://linuxcommandlibrary.com/man/mamba
+conda install -n base conda-forge::mamba
+conda install -n GeneralScienceEnv conda-forge::mamba
 
 
+conda activate GeneralScienceEnv
+mamba install -c conda-forge opencv python-docx imageio matplotlib pypdf2 selenium
+### NOTE: the -c is needed to install from the correct location (conda-forge)
 
+conda activate base
+### Then launch Anaconda Navigator GUI:
+anaconda-navigator
 
-
-
-
-
+### seems to be faster with mamba :-)
 
 
 

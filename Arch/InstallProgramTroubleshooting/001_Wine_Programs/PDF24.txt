@@ -118,3 +118,152 @@ libva error: /usr/lib/dri/iHD_drv_video.so init failed
 
 ### works fine so far
 
+
+
+
+### installing on arch p51:
+[neek@neekp51arch Wine_Installers]$ wine pdf24-creator-9.2.2-x86.exe
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:wineusb:query_id Unhandled ID query type 0x5.
+0024:fixme:thread:GetThreadUILanguage : stub, returning default language.
+0024:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 005DD97C, 00000000 005DD9A4
+0024:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 005DD97C 00000000 005DD9A4) returning a dummy value (current locale)
+0024:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 005DD97C, 015BA680 005DD9A4
+0024:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 005DD97C 015BA680 005DD9A4) returning a dummy value (current locale)
+0110:fixme:thread:GetThreadUILanguage : stub, returning default language.
+0110:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 0079D9C8, 00000000 0079D9F0
+0110:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 0079D9C8 00000000 0079D9F0) returning a dummy value (current locale)
+0110:fixme:nls:RtlGetThreadPreferredUILanguages 00000038, 0079D9C8, 017819B0 0079D9F0
+0110:fixme:nls:get_dummy_preferred_ui_language (0x38 0x409 0079D9C8 017819B0 0079D9F0) returning a dummy value (current locale)
+0110:fixme:wtsapi:WTSRegisterSessionNotification Stub 0001008E 0x00000000
+0110:fixme:uxtheme:BufferedPaintInit Stub ()
+0110:fixme:win:DisableProcessWindowsGhosting : stub
+0110:fixme:graphics:ShutdownBlockReasonDestroy (0001008E): stub
+0110:fixme:graphics:ShutdownBlockReasonCreate (0001008E, L"Installing"): stub
+0110:fixme:rstrtmgr:RmStartSession 0065B078, 0, 0065B07C stub!
+0110:fixme:graphics:ShutdownBlockReasonDestroy (0001008E): stub
+0110:fixme:graphics:ShutdownBlockReasonCreate (0001008E, L"Installing PDF24 Creator."): stub
+0110:fixme:system:EnableNonClientDpiScaling (000100A2): stub
+0110:fixme:msg:ChangeWindowMessageFilterEx 000100A2 c04e 1 00000000
+0110:fixme:system:EnableNonClientDpiScaling (000200A2): stub
+0110:fixme:msg:ChangeWindowMessageFilterEx 000200A2 c04e 1 00000000
+0110:fixme:msg:ChangeWindowMessageFilterEx 000100AC c04e 1 00000000
+0110:fixme:msg:ChangeWindowMessageFilterEx 000200AC c04e 1 00000000
+0110:fixme:shell:SHAutoComplete stub
+0110:fixme:rstrtmgr:RmRegisterResources -559038737, 83, 019A4A80, 0, 00000000, 0, 00000000 stub!
+0110:fixme:rstrtmgr:RmGetList -559038737, 0079F24C, 0079F250, 019A4A80, 0079F248 stub!
+0110:fixme:explorerframe:taskbar_list_SetProgressValue iface 00D220D0, hwnd 0001008E, ullCompleted 0, ullTotal 4b1 stub!
+0110:fixme:sfc:SfcIsFileProtected (00000000, L"C:\\Program Files (x86)\\PDF24\\unins000.exe") stub
+0110:fixme:explorerframe:taskbar_list_SetProgressState iface 00D220D0, hwnd 0001008E, flags 0 stub!
+0150:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0160:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0170:fixme:printui:PrintUIEntryW command not implemented: L"i"
+0180:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01a0:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01b0:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01c0:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01d0:fixme:printui:PrintUIEntryW command not implemented: L"i"
+01e0:fixme:service:svcctl_ChangeServiceConfig2W SERVICE_CONFIG_FAILURE_ACTIONS not implemented: period 86400 msg (null) cmd (null)
+01d8:err:ole:NDRCContextBinding invalid handle 01679310
+0204:fixme:ver:GetCurrentPackageId (0052D418 00000000): stub
+0110:fixme:exec:SHELL_execute flags ignored: 0x00000100
+0250:fixme:ieframe:PersistStorage_InitNew (017870E8)->(01792908)
+0250:fixme:ieframe:WebBrowser_put_RegisterAsDropTarget (017870E8)->(0)
+0110:fixme:exec:SHELL_execute flags ignored: 0x00000100
+0110:err:exec:SHELL_ExecuteW cannot set directory L"https://www.pdf24.org/products/pdf-creator"
+0250:fixme:ieframe:navigate_url Unsupported args (Flags 0058FD50 {VT_UINT: 0}; TargetFrameName (null))
+0110:err:exec:SHELL_ExecuteW cannot set directory L"https://www.pdf24.org/products/pdf-creator"
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+0278:fixme:iphlpapi:NotifyIpInterfaceChange (family 0, callback 034E4250, context 017A0960, init_notify 0, handle 0874FDE0): stub
+0250:fixme:ntdll:NtQuerySystemInformation info_class SYSTEM_PERFORMANCE_INFORMATION
+0250:fixme:msctf:InputProcessorProfileMgr_GetActiveProfile (01FA7158)->({34745c63-b2f0-4784-8b67-5e12c8701a31} 0058EA9C)
+0250:fixme:file:NtLockFile I/O completion on lock not implemented yet
+0250:fixme:mshtml:DocObjOleObject_SetClientSite key_path = L"Software\\PDF24\\IWebBrowser2"
+0250:fixme:ieframe:BrowserService_GetTravelLog 0222FF58 0058F134
+0250:fixme:ieframe:ClientSite_GetContainer (017871C0)->(0058F0F8)
+0250:fixme:mshtml:nsCacheInfoChannel_GetCacheKey (0224F330)->(0058E754)
+0250:fixme:mshtml:nsCacheInfoChannel_GetCacheTokenExpirationTime (0224F330)->(0058E764)
+0250:fixme:ieframe:DocHostUIHandler_GetDropTarget (017871C0)
+0058:fixme:mountmgr:query_property Faking StorageDeviceProperty data
+0058:fixme:mountmgr:query_property Faking StorageDeviceProperty data
+0250:fixme:ieframe:ClientSite_GetContainer (017871C0)->(0058FA58)
+0250:fixme:dwmapi:DwmGetCompositionTimingInfo (00000000 0058F62C)
+0250:fixme:ntdll:EtwRegisterTraceGuidsW   register trace class {a3da04e0-57d7-482a-a1c1-61da5f95bacb}
+0250:fixme:ntdll:EtwRegisterTraceGuidsW   register trace class {917b96b1-ecad-4dab-a760-8d49027748ae}
+0250:fixme:ntdll:EtwRegisterTraceGuidsW   register trace class {26d1e091-0ae7-4f49-a554-4214445c505c}
+0300:fixme:dwmapi:DwmFlush () stub
+0250:fixme:jscript:JScriptProperty_SetProperty Unimplemented property 70000001
+0250:fixme:jscript:JScriptProperty_SetProperty Unimplemented property 70000002
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+0250:fixme:ieframe:PropertyNotifySink_OnChanged unimplemented dispid 1005
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+026c:fixme:secur32:get_cipher_algid unknown algorithm 23
+026c:fixme:secur32:get_mac_algid unknown algorithm 200, cipher 23
+026c:fixme:secur32:get_cipher_algid unknown algorithm 23
+026c:fixme:secur32:get_mac_algid unknown algorithm 200, cipher 23
+0250:fixme:mshtml:HTMLWindow2_get_frames (02250980)->(0058ED3C): semi-stub
+0250:fixme:mshtml:HTMLWindow2_get_frames (02250980)->(0058ED3C): semi-stub
+0250:fixme:mshtml:nsCacheInfoChannel_GetCacheTokenExpirationTime (02717720)->(0058EBA4)
+0250:fixme:mshtml:nsChannel_GetContentLength (02717720)->(0058EB40)
+0250:fixme:mshtml:get_listener_container unimplemented event L"visibilitychange"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=Lax"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=Lax"
+0250:fixme:mshtml:OmNavigator_javaEnabled (0271E6B0)->(0058E644) semi-stub
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=Lax"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=Lax"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None"
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+0250:fixme:mshtml:get_listener_container unimplemented event L"visibilitychange"
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None;Secure"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None;Secure"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None;Secure"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None;Secure"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None;Secure"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None;Secure"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:wininet:set_cookie Unknown additional option L"SameSite=None;Secure"
+0250:fixme:wininet:set_cookie secure not handled
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+0250:fixme:mshtml:nsCacheInfoChannel_GetCacheTokenExpirationTime (02BF41F0)->(0058EBA4)
+0250:fixme:mshtml:nsChannel_GetContentLength (02BF41F0)->(0058EB40)
+0310:fixme:secur32:get_cipher_algid unknown algorithm 23
+0310:fixme:secur32:get_mac_algid unknown algorithm 200, cipher 23
+030c:fixme:secur32:get_cipher_algid unknown algorithm 23
+030c:fixme:secur32:get_mac_algid unknown algorithm 200, cipher 23
+0310:fixme:secur32:get_cipher_algid unknown algorithm 23
+0310:fixme:secur32:get_mac_algid unknown algorithm 200, cipher 23
+030c:fixme:secur32:get_cipher_algid unknown algorithm 23
+030c:fixme:secur32:get_mac_algid unknown algorithm 200, cipher 23
+0250:fixme:mshtml:DOMPageTransitionEvent_get_persisted (02A1CA78)->(0058E950): always returning FALSE
+0250:fixme:urlmon:InternetBindInfo_GetBindString not supported string type 20
+0250:fixme:mshtml:nsCacheInfoChannel_GetCacheTokenExpirationTime (02CC0730)->(0058EBA4)
+0250:fixme:mshtml:nsChannel_GetContentLength (02CC0730)->(0058EB40)
+0110:fixme:rstrtmgr:RmEndSession 3735928559 stub!
+0110:fixme:graphics:ShutdownBlockReasonDestroy (0001008E): stub
+0110:fixme:wtsapi:WTSUnRegisterSessionNotification Stub 0001008E
+0110:fixme:uxtheme:BufferedPaintUnInit Stub ()

@@ -32,6 +32,7 @@ anaconda-navigator
 
 
 
+### If working fine, proceed to the Anaconda text document in the Programing folder of this git repository for setting up the programing environment.
 
 
 

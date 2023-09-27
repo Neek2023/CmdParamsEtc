@@ -7,7 +7,8 @@
 ### Make the new repository on github and add a README, license, etc. 
 
 ### https://stackoverflow.com/questions/1408790/how-do-i-pull-my-project-from-github
-### First, you'll need to tell git about yourself. Get your username and token together from your settings page.
+### First, you'll need to tell git about yourself.
+### Get your username and token together from your settings page.
 # https://github.com/settings/tokens
 
 ### Then run:
@@ -15,9 +16,20 @@ git config --global github.user YOUR_USERNAME
 git config --global github.token YOURTOKEN
 
 ### You will need to generate a new (ed25519, not RSA anymore) key if you don't have a back-up of your key.
-# http://help.github.com/msysgit-key-setup/
+### Deleted page: http://help.github.com/msysgit-key-setup/
+### Instead:
+### https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+cd
+mkdir .ssh
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ### Info about key phassphrases:
 # https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases
+
+### Adding your SSH key to the ssh-agent:
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_ed25519_GitHub_Neek_P51_Arch
+
 ### Add pub key to GitHub
 # https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 

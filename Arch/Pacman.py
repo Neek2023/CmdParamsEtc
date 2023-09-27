@@ -165,3 +165,83 @@ gpg --list-keys --fingerprint KEYID
 ### edit /etc/pacman.conf to uncomment or add:
 Color
 ILoveCandy
+ParallelDownloads = 5
+
+
+
+
+Programs
+sudo pacman -S keepass keepassxc vlc alsa-utils alsa-plugins alsa-firmware sof-firmware
+
+
+### To install wine, first unable multilib:
+### uncomment the [multilib] section in /etc/pacman.conf: (both lines)
+"""
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+""""
+
+sudo vim /etc/pacman.conf
+sudo pacman -Syu
+sudo pacman -S wine wine-gecko wine-mono
+### optional dependencies:
+lib32-giflib lib32-gnutls lib32-v4l-utils lib32-libpulse lib32-alsa-lib lib32-libxcomposite lib32-libxinerama lib32-opencl-icd-loader lib32-gst-plugins-base-libs lib32-sdl2 cups dosbox
+
+sudo pacman -S obs-studio texlive freecad sane simple-scan kicad kicad-library kicad-library-3d notepadqq flameshot
+optional for above programs: libva-intel-driver libva-mesa-driver sndio v4l2loopback-dkms graphviz openscad mathjax2 grim jre-openjdk keepassxc rclone xclip libreoffice-fresh-it hunspell hunspell-en_us hunspell-en_gb hunspell-it jre8-openjdk libreoffice-extension-texmaths libreoffice-extension-writer2latex gstreamer gstreamer-docs gst-libav libde265 linux-firmware-qlogic
+
+sudo pacman -S enchant mythes-en ttf-liberation ttf-bitstream-vera pkgstats adobe-source-sans-pro-fonts gst-plugins-good ttf-droid ttf-dejavu aspell-en icedtea-web gst-libav ttf-ubuntu-font-family ttf-anonymous-pro languagetool libmythes noto-fonts-emoji
+
+
+
+sudo pacman -S asunder lib32-glibc
+yay -S makemkv kio-gdrive kdiff3 ffmpegthumbnailer libreoffice-extension-languagetool gst-plugin-openh264 mkinitcpio-firmware informant
+sudo usermod -a -G informant username # add user to informant group to afoid estra sudos
+### https://github.com/bradford-smith94/informant
+
+### Add colors to terminal:
+### https://averagelinuxuser.com/linux-terminal-color/
+### Note, I only changed the local ~/.bashrc by copying only the part of the downloaded bashrc related to colors into the ~/.bashrc I was already using (they had other commands in theirs too...). I also copied the COLORS_DIR file into /etc/
+
+
+### https://apps.kde.org/dolphin/
+### KDE KIO for gdrive: # https://community.kde.org/KDE_KIO_Worker_for_Google_Drive_Integration
+### Usage: Open the Network folder in Dolphin and click on "Google Drive".
+### You can use the command line as well:
+# kioclient5 exec gdrive:/
+### https://www.reddit.com/r/kde/comments/5yadyw/dolphin_google_drive_integration/
+
+
+### Automatic cleaning the package cache
+### if you download updates very often quite soon you will discover that your package cache directory is unacceptably large. For example, my package cache folder exceeded 1G after 2 weeks already.
+### Check the size of your package cache:
+du -sh /var/cache/pacman/pkg/
+
+### You can clean it manually from time to time, but it is better to automate such a thing. That is possible with the paccache script that will clean it weekly by removing old packages and keeping 3 the most recent version of each package in case you need to downgrade some packages.
+### paccache is a part of pacman contributed scripts, so install them:
+sudo pacman -S pacman-contrib
+
+### And activate the paccache timer:
+sudo systemctl enable paccache.timer
+### Now, paccache will check your package cache directory and clean it if necessary every week.
+
+### There are also other more efficient ways to run it. For example, you can run paccache automatically after every system update, but it requires setting up a hook. I think weekly cleaning is fine for a new Arch Linux user.
+
+
+
+### Set up firewall (https://averagelinuxuser.com/arch-linux-after-install/)
+### I have a dedicated post on the Linux firewall where you can learn why and how to use the Linux firewall.
+### https://averagelinuxuser.com/linux-firewall/
+### I usually recommend UFW uncomplicated firewall. Install it:
+sudo pacman -S ufw
+### Enable:
+sudo ufw enable
+### Check its status.
+sudo ufw status verbose
+### It should be active and the default settings are fine for most users.
+### Enable its autostart with the system:
+sudo systemctl enable ufw.service
+### And you have firewall protection.
+
+
+

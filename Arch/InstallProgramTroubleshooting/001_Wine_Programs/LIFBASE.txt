@@ -46,3 +46,48 @@ wine: Read access denied for device L"\\??\\Z:\\", FS volume label and serial ar
 015c:err:menubuilder:InvokeShellLinker failed to extract icon from L"C:\\Program Files (x86)\\LIFBASE\\LIFBASE manual.pdf"
 
 ### Seems to run fine
+
+
+
+### installing wine on arch:
+[neek@neekp51arch Wine_Installers]$ wine Lifbase\ 2.1.exe
+wine: created the configuration directory '/home/neek/.wine'
+002c:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+004c:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+0054:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+004c:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+004c:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+004c:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+004c:err:ole:start_rpcss Failed to open RpcSs service
+0054:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+0054:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+0054:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0090:fixme:file:NtLockFile I/O completion on lock not implemented yet
+0090:fixme:ntdll:NtQuerySystemInformation info_class SYSTEM_PERFORMANCE_INFORMATION
+0090:fixme:msi:internal_ui_handler internal UI not implemented for message 0x0b000000 (UI level = 1)
+0090:fixme:msi:internal_ui_handler internal UI not implemented for message 0x0b000000 (UI level = 1)
+00f0:fixme:msg:pack_message msg 14 (WM_ERASEBKGND) not supported yet
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0118:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+wine: configuration in L"/home/neek/.wine" has been updated.
+0118:fixme:wineusb:query_id Unhandled ID query type 0x5.
+0024:fixme:ntdll:NtQuerySystemInformation info_class SYSTEM_PERFORMANCE_INFORMATION
+0148:fixme:ntdll:NtQuerySystemInformation info_class SYSTEM_PERFORMANCE_INFORMATION
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+wine: Read access denied for device L"\\??\\Z:\\", FS volume label and serial are not available.
+0148:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate (0x10098), partial stub!
+0148:fixme:win:NtUserLockWindowUpdate ((nil)), partial stub!
+0160:err:menubuilder:InvokeShellLinker failed to extract icon from L"C:\\Program Files (x86)\\LIFBASE\\Homepage.url"
+0158:err:menubuilder:InvokeShellLinker failed to extract icon from L"C:\\Program Files (x86)\\LIFBASE\\LIFBASE manual.pdf"
+### the fonts are all really small when I run lifbase... try the graphics options in winecfg mentioned in main wine notes file
