@@ -61,6 +61,7 @@ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
 ### Now, get the good mirror list with reflector and save it to mirrorlist. You can change the country from US to your own country.
 reflector -c "US" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
+reflector -c "Italy" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
 
 
 
@@ -553,6 +554,12 @@ sudo systemctl enable fstrim.timer
 journalctl -u fstrim
 ### Ex output:
 # Feb 07 19:18:23 fstrim[401]: /: 484.5 GiB (520173604864 bytes) trimmed on /dev/sdb3
+
+
+
+
+### To refresh or build the man page cache, run the mandb command:
+sudo mandb
 
 
 

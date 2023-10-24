@@ -1,0 +1,99 @@
+
+<span class="ryNqvb" jsaction="click:E6Tfl,GFf3ac,tMZCfe; contextmenu:Nqw7Te,QP7LD; mouseout:Nqw7Te; mouseover:E6Tfl,c2aHje" jsname="W297wb">deal with</span>
+
+<span class="ryNqvb" jsaction="click:E6Tfl,GFf3ac,tMZCfe; contextmenu:Nqw7Te,QP7LD; mouseout:Nqw7Te; mouseover:E6Tfl,c2aHje" jsname="W297wb">treat</span>
+
+
+
+
+write a javascript bookmarklet that does the following 
+copy the text displayed on a webpage for every span class="ryNqvb" and add the text values as items in a list named synonymValues
+
+then, concatinate all of the values from the list synonymValues into a string variable called allSynonymsListStr with " / " separating each value
+
+then, output the text from allSynonymsListStr in an alert
+
+
+
+
+javascript:(function() {
+  // Create an array to store the synonym values
+  var synonymValues = [];
+
+  // Find all elements with the specified class name
+  var spanElements = document.querySelectorAll('.ryNqvb');
+
+  // Iterate through the elements and add their text content to the array
+  spanElements.forEach(function(span) {
+    synonymValues.push(span.textContent);
+  });
+
+  // Concatenate the values with " / " separator
+  var allSynonymsListStr = synonymValues.join(' / ');
+
+  // Show the concatenated string in an alert
+  alert(allSynonymsListStr);
+})();
+
+
+
+// works to make the text string, next need to copy to clipboard as well
+javascript:(function() {
+  var synonymValues = [];
+
+  var spanElements = document.querySelectorAll('.ryNqvb');
+
+  spanElements.forEach(function(span) {
+    synonymValues.push(span.textContent);
+  });
+
+  var allSynonymsListStr = synonymValues.join(' / ');
+
+  alert(allSynonymsListStr);
+})();
+
+
+
+
+
+// works:
+javascript:(function() {
+  var synonymValues = [];
+
+  var spanElements = document.querySelectorAll('.ryNqvb');
+
+  spanElements.forEach(function(span) {
+    synonymValues.push(span.textContent);
+  });
+
+  var allSynonymsListStr = synonymValues.join(' / ');
+
+  alert(allSynonymsListStr);
+  
+  var tempInput = document.createElement("input");
+  tempInput.setAttribute("value", allSynonymsListStr);
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+})();
+
+
+
+// works (without alerts):
+javascript:(function() {
+  var synonymValues = [];
+
+  var spanElements = document.querySelectorAll('.ryNqvb');
+
+  spanElements.forEach(function(span) {
+    synonymValues.push(span.textContent);
+  });
+
+  var allSynonymsListStr = synonymValues.join(' / ');
+
+  var tempInput = document.createElement("input");
+  tempInput.setAttribute("value", allSynonymsListStr);
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+})();

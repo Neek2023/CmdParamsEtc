@@ -1,0 +1,75 @@
+<lt-span class="lt-comp-synonyms-content__item__button" data-lt-tabindex="0" data-lt-testid="synonym">conciare</lt-span>
+
+
+
+write a javascript bookmarklet that does the following 
+copy the text displayed on a webpage for every span class="lt-comp-synonyms-content__item__button" and add the text values as items in a list named synonymValues
+
+then, concatinate all of the values from the list synonymValues into a string variable called allSynonymsListStr with " / " separating each value
+
+then, output the text from allSynonymsListStr in an alert
+
+
+
+
+// works to make the text string, next need to copy to clipboard as well
+javascript:(function() {
+  var synonymValues = [];
+
+  var synonymElements = document.querySelectorAll('.lt-comp-synonyms-content__item__button');
+
+  synonymElements.forEach(function(element) {
+    synonymValues.push(element.textContent);
+  });
+
+  var allSynonymsListStr = synonymValues.join(' / ');
+
+  alert(allSynonymsListStr);
+})();
+
+
+
+
+
+// works:
+javascript:(function() {
+  var synonymValues = [];
+
+  var synonymElements = document.querySelectorAll('.lt-comp-synonyms-content__item__button');
+
+  synonymElements.forEach(function(element) {
+    synonymValues.push(element.textContent);
+  });
+
+  var allSynonymsListStr = synonymValues.join(' / ');
+
+  alert(allSynonymsListStr);
+  
+  var tempInput = document.createElement("input");
+  tempInput.setAttribute("value", allSynonymsListStr);
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+})();
+
+
+
+// works (without alerts):
+javascript:(function() {
+  var synonymValues = [];
+
+  var synonymElements = document.querySelectorAll('.lt-comp-synonyms-content__item__button');
+
+  synonymElements.forEach(function(element) {
+    synonymValues.push(element.textContent);
+  });
+
+  var allSynonymsListStr = synonymValues.join(' / ');
+
+  var tempInput = document.createElement("input");
+  tempInput.setAttribute("value", allSynonymsListStr);
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+})();
+

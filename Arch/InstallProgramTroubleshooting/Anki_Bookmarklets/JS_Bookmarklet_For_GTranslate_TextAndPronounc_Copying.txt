@@ -1,0 +1,104 @@
+write a javascript bookmarklet that does the following 
+copy trat·tà·re from the code below from a webpage and set it equal to a variable called pronounciation
+<span jsname="toZopb">trat·tà·re</span>
+
+Then copy trattare from the code below from a webpage and set it equal to a variable called ItWord
+<lt-div class="lt-mirror__canvas" style="margin-top: 0px !important; margin-left: 0px !important; width: 553.5px !important; height: 32px !important;">trattare</lt-div>
+
+Then use the two variables pronounciation and ItWord to create the following string:
+trattare [trat·tà·re]
+
+Copy this resulting string to the clipboard
+
+
+
+
+
+javascript:(function() {
+  // Select the elements and extract their text content
+  var pronunciationElement = document.querySelector('span[jsname="toZopb"]');
+  var itWordElement = document.querySelector('lt-div.lt-mirror__canvas');
+  alert("pronunciationElement: " + pronunciationElement + ". itWordElement:" + itWordElement);
+
+  if (pronunciationElement && itWordElement) {
+    var pronunciation = pronunciationElement.textContent.trim();
+    var ItWord = itWordElement.textContent.trim();
+
+    // Create the resulting string
+    var resultString = ItWord + " [" + pronunciation + "]";
+
+    // Create a temporary input element to copy the result to the clipboard
+    var tempInput = document.createElement("input");
+    tempInput.setAttribute("value", resultString);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    // Inform the user
+    alert("Result copied to clipboard:\n" + resultString);
+  } else {
+    alert("Elements not found on the page.");
+  }
+})();
+
+
+
+
+
+
+
+
+
+//the code below makes the right result string and copies it to clipboard but does not delete new text box at bottom of page at the end ... lol...
+// bookmarklets did not loke comments in the bookmarklet...
+
+javascript:(function() {
+  var pronunciationElement = document.querySelector('span[jsname="toZopb"]');
+  var itWordElement = document.querySelector('lt-div.lt-mirror__canvas');
+  alert("pronunciationElement: " + pronunciationElement + ". itWordElement:" + itWordElement);
+
+  if (pronunciationElement && itWordElement) {
+    var pronunciation = pronunciationElement.textContent.trim();
+    var ItWord = itWordElement.textContent.trim();
+
+    var resultString = ItWord + " [" + pronunciation + "]";
+
+    var tempInput = document.createElement("input");
+    tempInput.setAttribute("value", resultString);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+
+    alert("Result copied to clipboard:\n" + resultString);
+  } else {
+    alert("Elements not found on the page.");
+  }
+})();
+
+
+
+
+// without alerts:
+javascript:(function() {
+  var pronunciationElement = document.querySelector('span[jsname="toZopb"]');
+  var itWordElement = document.querySelector('lt-div.lt-mirror__canvas');
+
+  if (pronunciationElement && itWordElement) {
+    var pronunciation = pronunciationElement.textContent.trim();
+    var ItWord = itWordElement.textContent.trim();
+
+    var resultString = ItWord + " [" + pronunciation + "]";
+
+    var tempInput = document.createElement("input");
+    tempInput.setAttribute("value", resultString);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+
+  } else {
+    alert("Elements not found on the page.");
+  }
+})();
+//Tried to add in + "\n\r <BR>" above to make a new line after this line, but did not work in anki pasting...
+

@@ -190,12 +190,11 @@ lib32-giflib lib32-gnutls lib32-v4l-utils lib32-libpulse lib32-alsa-lib lib32-li
 sudo pacman -S obs-studio texlive freecad sane simple-scan kicad kicad-library kicad-library-3d notepadqq flameshot
 optional for above programs: libva-intel-driver libva-mesa-driver sndio v4l2loopback-dkms graphviz openscad mathjax2 grim jre-openjdk keepassxc rclone xclip libreoffice-fresh-it hunspell hunspell-en_us hunspell-en_gb hunspell-it jre8-openjdk libreoffice-extension-texmaths libreoffice-extension-writer2latex gstreamer gstreamer-docs gst-libav libde265 linux-firmware-qlogic udftools xfsprogs
 
-sudo pacman -S enchant mythes-en ttf-liberation ttf-bitstream-vera pkgstats adobe-source-sans-pro-fonts gst-plugins-good ttf-droid ttf-dejavu aspell-en icedtea-web gst-libav ttf-ubuntu-font-family ttf-anonymous-pro languagetool libmythes noto-fonts-emoji
-
+sudo pacman -S enchant mythes-en ttf-liberation ttf-bitstream-vera pkgstats adobe-source-sans-pro-fonts gst-plugins-good ttf-droid ttf-dejavu aspell-en icedtea-web gst-libav ttf-ubuntu-font-family ttf-anonymous-pro languagetool libmythes noto-fonts-emoji kimageformats
 
 
 sudo pacman -S asunder lib32-glibc
-yay -S makemkv kio-gdrive kdiff3 ffmpegthumbnailer libreoffice-extension-languagetool gst-plugin-openh264 mkinitcpio-firmware informant qdirstat-bin
+yay -S makemkv kio-gdrive kdiff3 ffmpegthumbnailer libreoffice-extension-languagetool gst-plugin-openh264 mkinitcpio-firmware informant qdirstat-bin heifthumbnailer resvg raw-thumbnailer xnviewmp video-compare
 sudo usermod -a -G informant username # add user to informant group to afoid estra sudos
 ### https://github.com/bradford-smith94/informant
 

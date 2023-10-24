@@ -27,8 +27,8 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 # https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases
 
 ### Adding your SSH key to the ssh-agent:
-# eval "$(ssh-agent -s)"
-# ssh-add ~/.ssh/id_ed25519_GitHub_Neek_P51_Arch
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519_GitHub_Neek_P51_Arch
 
 ### Add pub key to GitHub
 # https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
